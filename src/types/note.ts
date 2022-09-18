@@ -1,3 +1,13 @@
+export type Note = {
+  id: number;
+  name: string;
+  created: string;
+  category: string;
+  content: string;
+  dates: string;
+  archived: boolean;
+};
+
 export enum NoteActionType {
     FETCH_NOTE = 'FETCH_NOTE',
     FETCH_NOTE_SUCCESS = 'FETCH_NOTE_',

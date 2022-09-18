@@ -1,12 +1,29 @@
-import React from "react";
-import {useTypedSelector} from "../hooks/useTypeSelector"
+import React, { useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { useTypedSelector } from "../hooks/useTypeSelector";
+import { fetchNotes } from "../store/action-creater/notes";
+import { Note } from "../types/note";
+
 
 const NoteList: React.FC = () => {
-    const {note, error, loading} = useTypedSelector(state => state.note)
-    console.log(note, error, loading);
+    const { note, error, loading } = useTypedSelector(state => state.note)
+     const dispatch: any = useDispatch()
+
+    useEffect( () => {
+        dispatch(fetchNotes())
+    }, [])
+
+    if (loading) {
+        return <h1>Loadnig, wait a second...</h1>
+    }
+    if (error) {
+        return <h1>{error}</h1>
+    }
     return (
         <div>
-Hello
+            {(note as Note[]).map((user) => (
+        <div key={user.id}>{user.name}</div>
+      ))}
         </div>
     )
 }
