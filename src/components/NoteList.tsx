@@ -21,8 +21,8 @@ const NoteList: React.FC = () => {
     }
     return (
         <div>
-            {(note as Note[]).map((user) => (
-        <div key={user.id}>{user.name}</div>
+            {(note as Note[]).map((elem) => (
+        <div key={elem.id}>{elem.name}</div>
       ))}
         </div>
     )
