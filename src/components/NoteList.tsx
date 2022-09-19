@@ -1,16 +1,15 @@
 import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useActions } from "../hooks/useActions";
 import { useTypedSelector } from "../hooks/useTypeSelector";
-import { fetchNotes } from "../store/action-creater/notes";
 import { Note } from "../types/note";
 
 
 const NoteList: React.FC = () => {
     const { note, error, loading } = useTypedSelector(state => state.note)
-     const dispatch: any = useDispatch()
+     const {fetchNotes} = useActions()
 
     useEffect( () => {
-        dispatch(fetchNotes())
+        fetchNotes()
     }, [])
 
     if (loading) {
