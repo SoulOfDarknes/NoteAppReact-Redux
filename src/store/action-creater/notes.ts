@@ -9,7 +9,7 @@ export const fetchNotes = () => {
             dispatch({
                 type: NoteActionType.FETCH_NOTE
             })
-            const response = await axios.get("http://myjson.dit.upm.es/api/bins/dr02")
+            const response = await axios.get("http://myjson.dit.upm.es/api/bins/39ri")
             
             // Eduard its just imitation of loading,  you like that?
             setTimeout(() => {

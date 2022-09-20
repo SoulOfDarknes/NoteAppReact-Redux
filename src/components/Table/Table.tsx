@@ -29,8 +29,6 @@ const Table: React.FC = () => {
                 </thead>
                <NoteList /> 
                 
-
-
                 
                 <tbody>
     <tr>

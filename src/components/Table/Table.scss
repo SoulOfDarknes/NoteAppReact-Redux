@@ -6,6 +6,9 @@
         table {
             width: 100%;
             table-layout: fixed;
+            border-spacing: 0 0.5em;
+            border-collapse: inherit;
+}
     thead{
         th{
         padding: 10px 10px;
@@ -46,6 +49,7 @@ th {
 }
 
     tbody{
+        
         tr{
         td{
             padding: 10px;
@@ -113,5 +117,4 @@ th {
    &:hover{
     background: darken(#EC5840, 10%);
   }
-}
 }
