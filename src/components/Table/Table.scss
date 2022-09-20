@@ -1,6 +1,7 @@
 @import "../../styles/var.scss";
 
 .note {
+
  margin: 2em 3em 0 3em;
 
         table {
@@ -16,36 +17,47 @@
         font-size: 15px;
         text-transform: uppercase;
         color: $text-color;
-        text-align: left;
         }
         
     tr td:first-child,
     tr th:first-child {
     border-top-left-radius: 0.5em;
     border-bottom-left-radius: 0.5em;
-    padding-left: 1em;
     }
     tr td:last-child,
     tr th:last-child {
     border-top-right-radius: 0.5em;
     border-bottom-right-radius: 0.5em;
-    padding-right: 1em;
     }
     th:first-child {
         width: 4em;
     }
     th:nth-last-child(-n+3) {
-        width: 3em;
+        width: 2em;
+
     }
+        th:last-child {
+        background-image: url(../../img/delete.svg);
+        background-size: 80%;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 1em 0;
+    }   
+    th:nth-last-child(2){
+        background-image: url(../../img/archive.svg);
+      background-size: 80%;
+      background-repeat: no-repeat;
+      background-position: center;
+      padding: 1em 0 ;
+    }
+    
     }
 td,
 th {
-  padding: 0.4em;
   text-align: left;
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
-  height: 1em;
 }
 
     tbody{

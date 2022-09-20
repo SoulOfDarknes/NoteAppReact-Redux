@@ -1,20 +1,21 @@
 import React from "react";
 import NoteList from "../NoteList/NoteList";
-
+import { ReactComponent as archiveSvg } from "../../img/archive.svg";
 
 import "./Table.scss";
 
 const Table: React.FC = () => {
+  console.log(archiveSvg)
     const headers = [
         { key: "category", label: " " },
         { key: "name", label: "Name" },
         { key: "created", label: "Created" },
         { key: "content", label: "Content" },
         { key: "dates", label: "Dates" },
-        { key: "edit", label: " " },
-        { key: "delete", label: " " },
-        { key: "archived", label: " " },
-        
+        { key: "edit", label: "" },
+        { key: "delete", label: "" },
+        { key: "archived", label: "" },
+         
     ]
     return (
         <div className="note">
@@ -22,7 +23,8 @@ const Table: React.FC = () => {
                 <thead>
                     <tr>
                         {headers.map((row) => {
-                            return <th key={row.key}>{row.label}
+                          return <th key={row.key}>
+                            {row.label}
                             </th>
             })}
                     </tr>
