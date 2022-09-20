@@ -1,3 +1,4 @@
+
 export type Note = {
   id: number;
   name: string;
@@ -7,6 +8,7 @@ export type Note = {
   dates: string;
   archived: boolean;
 };
+
 
 export enum NoteActionType {
     FETCH_NOTE = 'FETCH_NOTE',

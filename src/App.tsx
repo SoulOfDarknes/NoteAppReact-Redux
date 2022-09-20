@@ -1,10 +1,13 @@
 import React from "react";
-import  NoteList  from "./components/NoteList"
+// import NoteList from "./components/NoteList/NoteList";
+import Table from "./components/Table/Table"
 
 function App() {
   return (
     <div className="App">
-      <NoteList/>
+      
+      <Table />
+      {/* <NoteList />     */}
     </div>
   );
 }
