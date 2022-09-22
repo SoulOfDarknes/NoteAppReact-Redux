@@ -1,11 +1,9 @@
 import React from "react";
 import NoteList from "../NoteList/NoteList";
-import { ReactComponent as archiveSvg } from "../../img/archive.svg";
 
 import "./Table.scss";
 
 const Table: React.FC = () => {
-  console.log(archiveSvg)
     const headers = [
         { key: "category", label: " " },
         { key: "name", label: "Name" },

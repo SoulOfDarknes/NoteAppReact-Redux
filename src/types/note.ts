@@ -6,7 +6,9 @@ export type Note = {
   category: string;
   content: string;
   dates: string;
-  archived: boolean;
+    archived: boolean;
+    handleEditClick: (event: any, note?: any) => void;
+    
 };
 
 
